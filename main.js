@@ -20,15 +20,6 @@ document.querySelector("#answer1").innerHTML = averagePrice;
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
         //    (#2)      //
 
-// NOTES //
-// [1,2,3,4].map(function(elm){
-//   return elm * 2
-// })
-//
-// [1,2,3,4].filter(function(elm){
-//   return elm * 2;
-// })
-
 var itemsRightPrice = items.filter(function(ele){
   return ele.price >= 14.00 && ele.price <= 18.00;
 });
@@ -61,9 +52,6 @@ document.querySelector("#answer3").innerHTML = item_GBP_Title + item_GBP_Price;
 var itemWood = items.filter(function(element){
   return _.contains(element.materials, "wood")
 })
-// }).map(function(element){
-//   return {title: element.title, price: element.price}
-// });
 
 var woodTitle = itemWood.map(function(element){
   return element.title;
@@ -78,17 +66,14 @@ var matEight = items.filter(function(obj){
 });
 
 var fiveAnswer = matEight.map(function(element){
-  return element.title + element.materials +element.materials.length;
+  return element.title + "\n" + element.materials.length + "\n" + element.materials;
 });
 
 document.querySelector("#answer5").innerHTML = fiveAnswer;
 
-// ++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
       // (#6) //
-// var who = items.filter(function(obj){
-//   return obj.who_made;
-// });
 
 var WhoHowMany = items.filter(function(obj){
   return _.contains(obj, "i_did")
